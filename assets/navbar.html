@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>find-read</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,54 +16,31 @@
     </style>
   </head>
 <body>
-  <nav class="navbar has-background-black-ter	" role="navigation" aria-label="main navigation">
-    <!-- <div class="navbar-brand">
-      <a class="navbar-item" >
-        find-read
-      </a>
-      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-        <span aria-hidden="true"></span>
-      </a>
-    </div> -->
-
-    <div id="navbarBasicExample" class="navbar-menu">
-      <div class="navbar-start">
-        <a class="navbar-item" href = "#">
-          Home
-        </a>
-
-        <a class="navbar-item" href = "#">
-          About us
-        </a>
-
-        <a class="navbar-item" href = "#">
-          Categories
-        </a>
-
-        <a class="navbar-item" href = "#">
-          Shop
-        </a>
-
-        <a class="navbar-item" href = "#">
-          Wishlist
-        </a>
-      </div>
-      <div class="navbar-end">
-        <div class="navbar-item">
-          <div class="buttons">
-            <a class="button is-dark" href = "#">
-              <span>Sign up</span>
-            </a>
-            <a class="button is-dark" href = "#">
-              <span>Log in</span>
-            </a>
-          </div>
+    <nav class = "bg-zinc-800 w-auto h-14 flex">
+      <!--first nav-items-->
+        <div class="flex items-center justify-start h-full w-full ml-5">
+          <a href="#" class="text-slate-200 hover:text-black flex">
+            <span>
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+            </span>FIND-READ</a>
+          <a href="#" class="ml-5 text-slate-200 hover:text-black">About us</a>
+          <a href="#" class="ml-5 text-slate-200 hover:text-black">Categories</a>
+          <a href="#" class="ml-5 text-slate-200 hover:text-black">Shop</a>
+          <a href="#" class="ml-5 text-slate-200 hover:text-black">Wishlist</a>
         </div>
+      <!------------------->
+
+      <!--second-items----->
+
+      <div class="flex items-center justify-end h-full w-full mr-5 gap-4">
+        <button class="w-24 h-10 rounded-lg bg-zinc-700	"><a href="#" class=" text-slate-200">Sign up</a></button>
+        <button class="w-24 h-10 rounded-lg bg-zinc-700	"><a href="#" class=" text-slate-200">Log in</a></button>
       </div>
-    </div>
-  </nav>
+
+      <!------------------->
+    </nav>
 
 </body>
 </html>
