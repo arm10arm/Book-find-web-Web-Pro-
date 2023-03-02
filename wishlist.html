@@ -16,6 +16,7 @@
     </style>
 </head>
 <body>
+  <div id = "app3">
     <nav class = "bg-zinc-800 w-auto h-14 flex">
         <!--first nav-items-->
           <div class="flex items-center justify-start h-full w-full ml-5">
@@ -49,23 +50,31 @@
 
     <section  class="w-full h-auto flex justify-center">
         <div class="grid grid-cols-5 gap-x-12 gap-y-14">
-            <div class="grid grid-cols-5 gap-x-12 gap-y-14">
-                <div  class="h-full w-48 mr-6">
+                <div  v-for = "item of show2" class="h-full w-48 mr-6">
                    <div class="top flex justify-center w-full h-48">
-                           <img class = "h-full object-fit" :src = "items.images">
+                           <img class = "h-full object-fit" :src = "item.images">
                    </div>
                    <div class="content text-zinc-800	 w-auto h-32 text-sm">
-                       <p class="pt-4">ชื่อ: {{items.name}}</p>
-                       <p class="pt-1">แนว: {{items.type}}</p>
-                       <p class="pt-1 pb-2">สํานักพิมพ์: {{items.publish}}</p>
+                       <p class="pt-4">ชื่อ: {{item.name}}</p>
+                       <p class="pt-1">แนว: {{item.type}}</p>
+                       <p class="pt-1 pb-2">สํานักพิมพ์: {{item.publish}}</p>
                    </div>
                    <button class="w-full bg-zinc-900 text-zinc-300	h-10 rounded-lg">อ่านเพิ่มเติม</button>
-               </div>
-            </div>
+                  </div>
         </div>
     </section>
-    
-    <script src="./assets/js/books.js"></script>
+  </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+       var app3 = new Vue({
+        el:'#app3',
+        data: {
+            show2 : []
+        },
+        created(){
+            this.show2 = JSON.parse(localStorage.getItem("show1"))
+        },
+      })
+    </script>
 </body>
 </html>
