@@ -39,7 +39,7 @@ var app = new Vue({
                 id: 4,
                 type: "Howto",
                 type_id: 1,
-                author: "สิทธินันท์ พลวิสุทธิ์ศักดิ์",
+                author: "",
                 name: "Productivity Flow – ภาวะลื่นไหล ทำอะไรก็ง่ายหมด",
                 images:'./assets/img/104.jpeg',
                 publish: "อะไรเอ่ย",
@@ -50,7 +50,7 @@ var app = new Vue({
                 id: 5,
                 type: "Howto",
                 type_id: 1,
-                author: "โรเบิร์ต ไอ. ซัตตัน (Robert Sutton)",
+                author: "",
                 name: "ศิลปะการอยู่ร่วมกับคนเฮงซวย (ปกใหม่)",
                 images:'./assets/img/105.jpeg',
                 publish: "Amarin Howto",
@@ -61,7 +61,7 @@ var app = new Vue({
                 id: 6,
                 type: "Literature",
                 type_id: 2,
-                author: "ชังอึนจิน",
+                author: "",
                 name: "เมื่อฝนหยุดตก ผมจะหุบร่มที่กางมาตลอด",
                 images:'./assets/img/201.jpeg',
                 publish: "Picolo",
@@ -72,7 +72,7 @@ var app = new Vue({
                 id: 7,
                 type: "Literature",
                 type_id: 2,
-                author: "ซากากิ สึคาสะ",
+                author: "",
                 name: "ร้านขนมแห่งความลับ ตอนความลับของความรัก",
                 images:'./assets/img/202.jpeg',
                 publish: "แพรวสํานักพิมพ์",
@@ -83,7 +83,7 @@ var app = new Vue({
                 id: 8,
                 type: "Literature",
                 type_id: 2,
-                author: "ปารณีย์ ประภาพรพิพัฒน์",
+                author: "",
                 name: "Disappear เกิดขึ้น รักอยู่ ดับไป",
                 images:'./assets/img/203.jpeg',
                 publish: "P.S.",
@@ -94,7 +94,7 @@ var app = new Vue({
                 id: 9,
                 type: "Literature",
                 type_id: 2,
-                author: "ทีโม่ หลิน",
+                author: "",
                 name: "ถึงสถานีแห่งความสุขแล้วปลุกฉันด้วย",
                 images:'./assets/img/204.jpeg',
                 publish: "Picolo",
@@ -105,7 +105,7 @@ var app = new Vue({
                 id: 10,
                 type: "Literature",
                 type_id: 2,
-                author: "อีซึงซ็อก",
+                author: "",
                 name: "ความสุขไม่ต้องสมบูรณ์แบบ",
                 images:'./assets/img/205.jpeg',
                 publish: "Springbooks",
@@ -116,7 +116,7 @@ var app = new Vue({
                 id: 11,
                 type: "Business",
                 type_id: 3,
-                author: "คนข่าว 2499",
+                author: "",
                 name: "ชัชชาติ สิทธิพันธุ์ ผู้ว่าฯที่แข็งแกร่ง",
                 images:'./assets/img/301.jpeg',
                 publish: "เพชรพินิจ",
@@ -127,7 +127,7 @@ var app = new Vue({
                 id: 12,
                 type: "Business",
                 type_id: 3,
-                author: "ลงทุนแมน",
+                author: "",
                 name: "BLACK SWAN วันมืดมิดในชีวิตการลงทุน",
                 images:'./assets/img/302.jpeg',
                 publish: "LTMAN",
@@ -138,7 +138,7 @@ var app = new Vue({
                 id: 13,
                 type: "Business",
                 type_id: 3,
-                author: "นภดล ร่มโพธิ์",
+                author: "",
                 name: "ใช้ OKRs อย่างไรให้สำเร็จ",
                 images:'./assets/img/303.jpeg',
                 publish: "เอ็นพี อินเทลลิเจนซ์",
@@ -149,7 +149,7 @@ var app = new Vue({
                 id: 14,
                 type: "Business",
                 type_id: 3,
-                author: "พัคฮยองจุน",
+                author: "",
                 name: "BTS Marketing กลยุทธ์ครองตลาดโลก",
                 images:'./assets/img/304.jpeg',
                 publish: "Amarin Howto",
@@ -160,7 +160,7 @@ var app = new Vue({
                 id: 15,
                 type: "Business",
                 type_id: 3,
-                author: "ภัทรนิษฐ์ สิทธิวัชราศักดิ์",
+                author: "",
                 name: "Instagram Marketing",
                 images:'./assets/img/305.jpeg',
                 publish: "Infopress",
@@ -171,7 +171,7 @@ var app = new Vue({
                 id: 16,
                 type: "Garden",
                 type_id: 4,
-                author: "กองบก.นิตยสารบ้านและสวน",
+                author: "",
                 name: "บ้านและสวนฉ.พิเศษ Wooden Houses รวมบ้านฯ",
                 images:'./assets/img/401.jpeg',
                 publish: "บ้านและสวน",
@@ -182,7 +182,7 @@ var app = new Vue({
                 id: 17,
                 type: "Garden",
                 type_id: 4,
-                author: "เอชิโอ มานชินี่",
+                author: "",
                 name: "เมืองพอดี แนวคิดเพื่อเมืองเอาใจใส่",
                 images:'./assets/img/402.jpeg',
                 publish: "อินี่เครือข่ายนวัตกร",
@@ -193,7 +193,7 @@ var app = new Vue({
                 id: 18,
                 type: "Garden",
                 type_id: 4,
-                author: "กองบรรณาธิการนิตยสาร Room",
+                author: "",
                 name: "Minimalist House for Tropical Living บ้านมินิมัล วิถีทรอปิคัล",
                 images:'./assets/img/403.jpeg',
                 publish: "บ้านและสวน",
@@ -204,7 +204,7 @@ var app = new Vue({
                 id: 19,
                 type: "Garden",
                 type_id: 4,
-                author: "วรัปศร อัคนียุทธ,ภัทริน จิตรกร",
+                author: "",
                 name: "MODERN HOME FEELING GREEN บ้านที่รื่นรมย์ด้วยต้นไม้",
                 images:'./assets/img/404.jpeg',
                 publish: "บ้านและสวน",
@@ -215,7 +215,7 @@ var app = new Vue({
                 id: 20,
                 type: "Garden",
                 type_id: 4,
-                author: "ทิพาพรรณ ศิริเวชฎารักษ์",
+                author: "",
                 name: "15 BEST GARDENS",
                 images:'./assets/img/405.jpeg',
                 publish: "บ้านและสวน",
@@ -226,7 +226,7 @@ var app = new Vue({
                 id: 21,
                 type: "Novel",
                 type_id: 5,
-                author: "าวางุจิ โทชิคาซึ (Toshikazu Kawaguchi)",
+                author: "",
                 name: "เพียงชั่วเวลากาแฟยังอุ่น ระหว่างที่ความทรงจำยังไม่เลือนหาย",
                 images:'./assets/img/501.jpeg',
                 publish: "แพรวสํานักพิมพ์",
@@ -237,7 +237,7 @@ var app = new Vue({
                 id: 22,
                 type: "Novel",
                 type_id: 5,
-                author: "N.K. Jemisin (เอ็น. เค. เจมิซิน)",
+                author: "",
                 name: "ศิลาหาว",
                 images:'./assets/img/502.jpeg',
                 publish: "Salt Publishing",
@@ -248,7 +248,7 @@ var app = new Vue({
                 id: 23,
                 type: "Novel",
                 type_id: 5,
-                author: "PANNAKAN",
+                author: "",
                 name: "ANNA TEREZA ค้นฝันพลิกจักรวาล",
                 images:'./assets/img/503.jpeg',
                 publish: "ขีดเขียนอะคาเดมี",
@@ -259,7 +259,7 @@ var app = new Vue({
                 id: 24,
                 type: "Novel",
                 type_id: 5,
-                author: "เอโกะ คาโดโนะ",
+                author: "",
                 name: "แม่มดกิกิผจญภัย 2ต.กิกิกับเวทมนตร์บทใหม่",
                 images:'./assets/img/504.jpeg',
                 publish: "Bibli (บิบลิ)",
@@ -270,7 +270,7 @@ var app = new Vue({
                 id: 25,
                 type: "Novel",
                 type_id: 5,
-                author: "เอโกะ คาโดโนะ",
+                author: "",
                 name: "แม่มดกิกิผจญภัย ตอน ไปรษณีย์ด่วนแม่มด",
                 images:'./assets/img/505.jpeg',
                 publish: "Bibli (บิบลิ)",
@@ -278,7 +278,8 @@ var app = new Vue({
                 is_fav: false
             },
         ],
-        wish : []
+        wish : [],
+        book_type: ''
     },
     methods: {
         addshowiaaa(items){
@@ -296,5 +297,17 @@ var app = new Vue({
             let keep1 = JSON.stringify(all)
             localStorage.setItem("show1", keep1)
         }
-     },
+    },
+    computed: {
+        sort_book(){
+            if (this.book_type === ''){
+                return this.books1
+            }
+            else{
+                return this.books1.filter((book) => {
+                    return book.type === this.book_type
+                })
+            }
+        }
+    }
 })
