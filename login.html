@@ -11,17 +11,17 @@
 </head>
 
 <body>
-    <div class="flex  justify-center items-center h-screen bg-black">
+    <div class="flex justify-center items-center h-screen bg-black" id="app">
         <div class="w-96 p-6 shadow-lg bg-white rounded-xl">
             <h1 class="block text-center text-3xl font-semibold"><i class="fa-regular fa-user"></i> Log In</h1>
             <div class="mt-4">
                 <label for="username" class=" block text-base mb-2">Username</label>
-                <input type="text" id="username" placeholder="Enter your username"
+                <input v-model = "user" type="text" id="username" placeholder="Enter your username"
                     class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
             </div>
             <div class="mt-4">
                 <label for="password" class=" block text-base mb-2">Password</label>
-                <input type="password" id="password" placeholder="Enter your password"
+                <input v-model = "pass" type="password" id="password" placeholder="Enter your password"
                     class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
             </div>
             <div class="flex justify-between items-center mt-3">
@@ -35,11 +35,38 @@
             </div>
 
             <div class="mt-5">
-                <button class="w-full bg-black text-white rounded-sm py-2">Log In</button>
+                <button @click = "login()"class="w-full bg-black text-white rounded-sm py-2">Log In</button>
             </div>
 
         </div>
     </div>
 </body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            check: [],
+            user: '',
+            pass: ''
+        },
+        created() {
+            this.check = JSON.parse(localStorage.getItem('user_info'))
+        },
+        methods: {
+            login(){
+                if(this.user == this.check.username && this.pass == this.check.pass){
+                    alert('Login Success')
+                }
+                else if (this.user == '' || this.pass == ''){
+                    alert('Please fill all the fields')
+                }
+                else{
+                    alert('Login Failed')
+                }
+            }
+        },
+    })
+</script>
 
 </html>
