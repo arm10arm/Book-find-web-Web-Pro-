@@ -51,7 +51,7 @@
     <section  class="w-full h-auto flex justify-center">
         <div class="grid grid-cols-5 gap-x-12 gap-y-14">
                 <div  v-for = "(item, index) of show2" class="h-full w-48 mr-6">
-                   <div class="top flex justify-center w-full h-48" @click = "removeitem(index)">
+                   <div class="top flex justify-center w-full h-48" @click = "removeitem(index, item)">
                            <img class = "h-full object-fit" :src = "item.images">
                    </div>
                    <div class="content text-zinc-800	 w-auto h-32 text-sm">
@@ -80,8 +80,9 @@
             localStorage.setItem("show", keep);
             window.location.href = "./books.html";
           },
-          removeitem(index){
+          removeitem(index, item){
             this.show2.splice(index, 1)
+            item.is_fav = false;
           }
         },
       })
