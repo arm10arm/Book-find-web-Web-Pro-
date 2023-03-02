@@ -34,7 +34,7 @@
             <a href="#" class="ml-5 text-slate-200 hover:text-black">About us</a>
             <a href="#" class="ml-5 text-slate-200 hover:text-black">Categories</a>
             <a href="#" class="ml-5 text-slate-200 hover:text-black">Shop</a>
-            <a href="#" class="ml-5 text-slate-200 hover:text-black">Wishlist</a>
+            <a href="wishlist.html" class="ml-5 text-slate-200 hover:text-black" @click = "setwish(wish)">Wishlist</a>
           </div>
         <!------------------->
 
@@ -52,6 +52,13 @@
     </nav><br><br>
 
     <h1 class = "text-5xl text-center text-black underline underline-offset-8">Categories</h1><br><br>
+    <div class="fixse flex w-full justify-center">
+      <select class="bg-zinc-700" name="prename" v-model="prename">
+        <option>นาย</option>
+        <option>นาง</option>
+        <option>นางสาว</option>
+      </select>
+    </div><br><br>
 
     <section  class="w-full h-auto flex justify-center">
       <div class="grid grid-cols-5 gap-x-12 gap-y-14">
@@ -64,7 +71,8 @@
                 <p class="pt-1">แนว: {{items.type}}</p>
                 <p class="pt-1 pb-2">สํานักพิมพ์: {{items.publish}}</p>
             </div>
-            <button class="w-full bg-zinc-900 text-zinc-300	h-10 rounded-lg">อ่านเพิ่มเติม</button>
+            <button class="w-full bg-zinc-900 text-zinc-300	h-10 rounded-lg" @click = "addshowiaaa(items)">อ่านเพิ่มเติม</button>
+            <span style="font-family: 'Gloock', serif;"><button class = "bg-zinc-900 w-full h-12 mt-4 rounded-lg text-2xl text-zinc-300" @click = "addwish(items)">Add to wishlist</button></span>
         </div>
       </div>
     </section>
