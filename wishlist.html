@@ -26,10 +26,10 @@
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
               </svg>
               </span>FIND-READ</a>
-            <a href="#" class="ml-5 text-slate-200 hover:text-black">About us</a>
-            <a href="#" class="ml-5 text-slate-200 hover:text-black">Categories</a>
-            <a href="#" class="ml-5 text-slate-200 hover:text-black">Shop</a>
-            <a href="#" class="ml-5 text-slate-200 hover:text-black">Wishlist</a>
+            <a href="about-us.html" class="ml-5 text-slate-200 hover:text-black">About us</a>
+            <a href="categories.html" class="ml-5 text-slate-200 hover:text-black">Categories</a>
+            <a href="shop.html" class="ml-5 text-slate-200 hover:text-black">Shop</a>
+            <a href="wishlist.html" class="ml-5 text-slate-200 hover:text-black">Wishlist</a>
           </div>
         <!------------------->
 
@@ -50,8 +50,8 @@
 
     <section  class="w-full h-auto flex justify-center">
         <div class="grid grid-cols-5 gap-x-12 gap-y-14">
-                <div  v-for = "item of show2" class="h-full w-48 mr-6">
-                   <div class="top flex justify-center w-full h-48">
+                <div  v-for = "(item, index) of show2" class="h-full w-48 mr-6">
+                   <div class="top flex justify-center w-full h-48" @click = "removeitem(index)">
                            <img class = "h-full object-fit" :src = "item.images">
                    </div>
                    <div class="content text-zinc-800	 w-auto h-32 text-sm">
@@ -59,7 +59,7 @@
                        <p class="pt-1">แนว: {{item.type}}</p>
                        <p class="pt-1 pb-2">สํานักพิมพ์: {{item.publish}}</p>
                    </div>
-                   <button class="w-full bg-zinc-900 text-zinc-300	h-10 rounded-lg">อ่านเพิ่มเติม</button>
+                   <button class="w-full bg-zinc-900 text-zinc-300	h-10 rounded-lg" @click = "showinfo(item)">อ่านเพิ่มเติม</button>
                   </div>
         </div>
     </section>
@@ -73,6 +73,16 @@
         },
         created(){
             this.show2 = JSON.parse(localStorage.getItem("show1"))
+        },
+        methods: {
+          showinfo(item){
+            let keep = JSON.stringify(item);
+            localStorage.setItem("show", keep);
+            window.location.href = "./books.html";
+          },
+          removeitem(index){
+            this.show2.splice(index, 1)
+          }
         },
       })
     </script>
