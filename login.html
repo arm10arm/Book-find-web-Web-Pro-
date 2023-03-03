@@ -36,6 +36,7 @@
 
             <div class="mt-5">
                 <button @click = "login()"class="w-full bg-black text-white rounded-sm py-2">Log In</button>
+                <button @click = "goSignup()"class="w-full bg-black text-white rounded-sm py-2 mt-5">Sign Up</button>
             </div>
 
         </div>
@@ -46,16 +47,16 @@
     var app = new Vue({
         el: '#app',
         data: {
-            check: [],
+            check: [{username: 'pondtaloz', pass: 'pond2545'}],
             user: '',
-            pass: ''
+            password: ''
         },
         created() {
             this.check = JSON.parse(localStorage.getItem('user_info'))
         },
         methods: {
             login(){
-                if(this.user === this.check.username && this.pass === this.check.pass){
+                if(this.user === this.check.username && this.password === this.check.pass){
                     alert('Login Success')
                 }
                 else if (this.user == '' || this.pass == ''){
@@ -64,6 +65,9 @@
                 else{
                     alert('Login Failed')
                 }
+            },
+            goSignup(){
+                window.location.href = 'signup.html'
             }
         },
     })
