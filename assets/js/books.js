@@ -291,6 +291,7 @@ var app = new Vue({
             if(items.is_fav === false){
                 this.wish.push(items)
                 items.is_fav = true
+                alert("เพิ่มเข้ารายการโปรดแล้ว")
             }
         },
         setwish(all){
