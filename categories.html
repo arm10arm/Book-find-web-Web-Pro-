@@ -31,7 +31,7 @@
     <nav class="bg-zinc-800 w-auto h-14 flex">
       <!--first nav-items-->
       <div class="flex items-center justify-start h-full w-full ml-5">
-        <a href="#" class="text-slate-200 hover:text-black flex">
+        <a href="index.html" class="text-slate-200 hover:text-black flex">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
               stroke="currentColor" class="w-6 h-6">
@@ -39,9 +39,9 @@
                 d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
             </svg>
           </span>FIND-READ</a>
-        <a href="#" class="ml-5 text-slate-200 hover:text-black">About us</a>
-        <a href="#" class="ml-5 text-slate-200 hover:text-black">Categories</a>
-        <a href="#" class="ml-5 text-slate-200 hover:text-black">Shop</a>
+        <a href="about-us.html" class="ml-5 text-slate-200 hover:text-black">About us</a>
+        <a href="categories.html" class="ml-5 text-slate-200 hover:text-black">Categories</a>
+        <a href="shop.html" class="ml-5 text-slate-200 hover:text-black">Shop</a>
         <a href="wishlist.html" class="ml-5 text-slate-200 hover:text-black" @click="setwish(wish)">Wishlist</a>
       </div>
       <!------------------->
@@ -83,8 +83,9 @@
           <div class="content text-zinc-800	 w-auto h-32 text-sm">
             <p class="pt-4">ชื่อ: {{items.name}}</p>
             <p class="pt-1">แนว: {{items.type}}</p>
+            <p class="pt-1">ผู้เขียน: {{items.author}}</p>
             <p class="pt-1 pb-2">สํานักพิมพ์: {{items.publish}}</p>
-          </div>
+          </div><br><br>
           <button class="w-full bg-zinc-900 text-zinc-300	h-10 rounded-lg"
             @click="addshowiaaa(items)">อ่านเพิ่มเติม</button>
           <span style="font-family: 'Gloock', serif;"><button
