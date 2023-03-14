@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Book - Find</title>
+</head>
+
+<body>
+    <div class="flex justify-center items-center h-screen bg-black" id="app">
+        <div class="w-96 p-6 shadow-lg bg-white rounded-xl">
+            <h1 class="block text-center text-3xl font-semibold"><i class="fa-regular fa-user"></i> Log In</h1>
+            <div class="mt-4">
+                <label for="username" class=" block text-base mb-2">Username</label>
+                <input v-model = "user" type="text" id="username" placeholder="Enter your username"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-4">
+                <label for="password" class=" block text-base mb-2">Password</label>
+                <input v-model = "password" type="password" id="password" placeholder="Enter your password"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="flex justify-between items-center mt-3">
+                <div>
+                    <input type="checkbox">
+                    <label>Remember Me?</label>
+                </div>
+                <div>
+                    <a href="#" class="text-black font-semibold">Forgot Password?</a>
+                </div>
+            </div>
+
+            <div class="mt-5">
+                <button @click = "login()"class="w-full bg-black text-white rounded-sm py-2">Log In</button>
+                <button @click = "goSignup()"class="w-full bg-black text-white rounded-sm py-2 mt-5">Sign Up</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            check: [],
+            user: '',
+            password: ''
+        },
+        created() {
+            this.check = JSON.parse(localStorage.getItem('user_info'))
+        },
+        methods: {
+            login(){
+                if((this.user == this.check[0].username) && (this.password === this.check[0].pass)){
+                    alert('Login Success')
+                    window.location.href = 'index.html'
+                }
+                else if (this.user == '' || this.pass == ''){
+                    alert('Please fill all the fields')
+                }
+                else{
+                    alert('Login Failed')
+                }
+            },
+            goSignup(){
+                window.location.href = 'signup.html'
+            }
+        },
+    })
+</script>
+
+</html>

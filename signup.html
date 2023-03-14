@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Book - Find</title>
+</head>
+
+<body>
+    <div class="flex justify-center items-center h-screen bg-black" id="app">
+        <div class="w-96 p-6 shadow-lg bg-white rounded-xl">
+            <h1 class="block text-center text-3xl font-semibold">Sign Up!</h1>
+            <div class="mt-4">
+                <label for="username" class=" block text-base mb-2">Username</label>
+                <input v-model="username" type="text" id="username" placeholder="Enter your username"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-4">
+                <label for="password" class=" block text-base mb-2">Password</label>
+                <input v-model="pass" type="password" id="password" placeholder="Enter your password"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-4">
+                <label for="email" class="block text-base mb-2">E-mail</label>
+                <input v-model="email" type="email" id="email" placeholder="Enter your E-mail"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-4">
+                <label for="first_name" class="block text-base mb-2">First Name</label>
+                <input v-model="f_name" type="text" id="first_name" placeholder="Enter your First Name"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-4">
+                <label for="last_name" class="block text-base mb-2">Last Name</label>
+                <input v-model="l_name" type="text" id="last_name" placeholder="Enter your Last Name"
+                    class=" border w-full rounded-sm py-2 focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-4">
+                <label for="dob" class="block text-base mb-2">Date of Birth</label>
+                <input v-model="dob" type="date" id="dob"
+                    class=" border w-full rounded-sm focus:outline-none focus:ring-0 focus:border-gray-600">
+            </div>
+            <div class="mt-5">
+                <button @click="addInfo()" class="w-full bg-black text-white rounded-sm py-2">Sign Up</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            user_info: [],
+            username: '',
+            pass: '',
+            email: '',
+            f_name: '',
+            l_name: '',
+            dob: ''
+        },
+        methods: {
+            addInfo(){
+                if (this.username == '' || this.pass == '' || this.email == '' || this.f_name == '' || this.l_name == '' || this.dob == ''){
+                    alert('Please fill all the fields')
+                }
+                else{
+                    this.user_info.push({
+                        username: this.username,
+                        pass: this.pass,
+                        email: this.email,
+                        f_name: this.f_name,
+                        l_name: this.l_name,
+                        dob: this.dob
+                    })
+                    this.username = ''
+                    this.pass = ''
+                    this.email = ''
+                    this.f_name = ''
+                    this.l_name = ''
+                    this.dob = ''
+                    alert('Account created successfully')
+                }
+                localStorage.setItem('user_info', JSON.stringify(this.user_info))
+                window.location.href = 'login.html'
+            }
+        },
+    })
+</script>
+
+</html>
